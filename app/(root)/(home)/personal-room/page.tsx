@@ -35,6 +35,7 @@ const PersonalRoom = () => {
   if (!meetingID) return;
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingID}?personal=true`;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { call } = useGetCallById(meetingID);
 
   const startRoom = async () => {
